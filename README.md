@@ -9,3 +9,4 @@ Project Repository for CS489 Computer Ethics and Social Issues, Fall 2019, KAIST
 3. 11/27 : User test with first prototype
 
 Final presentation : 12/05
+
