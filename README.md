@@ -4,10 +4,10 @@ Project Repository for CS489 Computer Ethics and Social Issues, Fall 2019, KAIST
 
 ## Collaborators
 
-Hyunjoo Paik
-Yusung Sim
-Minseog Oh
-Jaegeon Jo
+Hyunjoo Paik (https://github.com/alexandra9975)  
+Yusung Sim (https://github.com/yusungsim)  
+Minseog Oh (https://github.com/MinSOh)  
+Jaegeon Jo (https://github.com/jlucete)  
 
 ## Timeline
 
