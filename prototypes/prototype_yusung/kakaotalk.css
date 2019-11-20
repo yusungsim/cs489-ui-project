@@ -1,7 +1,35 @@
 .app{
-    width : 30em;
-    height : 100%;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 800px;
     background-color: gray;
 }
 
+.header{
+    display: flex;
+    height: 5em;
+    width: 100%;
+    background-color: green;
+}
+
+.footer{
+    display: flex;
+    height: 5em;
+    width: 100%;
+    background-color: blue;
+}
+
+.app-body{
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+    width: 100%;
+    background-color: yellow;
+}
+
+.chatroom{
+    display: flex;
+    flex-basis: 80%;
+    height: 10%;
+}
