@@ -2,6 +2,7 @@ div{
     box-sizing: border-box;
 }
 
+/* top elements */
 .app{
     display: flex;
     flex-direction: column;
@@ -19,11 +20,13 @@ div{
 
 .footer{
     display: flex;
+    flex-direction: row;
     height: 5em;
     width: 100%;
     background-color: blue;
 }
 
+/* app body */
 .app-body{
     display: flex;
     flex-direction: column;
@@ -41,4 +44,10 @@ div{
     border: 1px solid black;
     margin-top: 3px;
     margin-bottom: 3px;
+}
+
+/* footer */
+.footer .tap{
+    display: flex;
+    background-color: greenyellow;
 }
