@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chatroom</title>
+    <link rel="stylesheet" href="chatroom.css">
+    <script src="chatroom.js"></script>
+    
+</head>
+<body>
+    <ul id="msg_list">
+
+        <li>
+                <div class="send_msg">
+                    <div class="send_txt">
+                        <textarea id="input_msg_box"></textarea>
+                    </div>
+                    <div class="send_button">
+                        <button type="button" id="send_button_box" class="hidden" onclick="add_my_msg();">Send</button>
+                    </div>
+                </div>
+        </li>
+
+
+    </ul>
+    <script>init(["Hi!","Hello!!","Hi!!!","Hello!!!!"],[true,true,true,false]);</script>
+    
+
+
+</body>
+</html>
