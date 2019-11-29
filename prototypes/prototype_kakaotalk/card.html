@@ -1,0 +1,56 @@
+<!doctype = html>
+<html>
+<head>
+	<title>Card</title>
+	<meta charset="utf-8">
+	<script src="card.js"></script>
+	<style>
+	.card_msg {
+		box-sizing:border-box;
+		margin:20px;
+		border:3px solid gray;
+		width:400px;
+		height:200px;
+		border-radius:10px;
+		display:none;
+	}
+	.card_msg > .sender {
+		margin:10px;
+		font-weight:bold;
+		font-size:20px;
+	}
+	.card_msg > .text {
+		margin:10px;
+		font-size:20px;
+		text-align:center;
+	}
+	#reply_box {
+		position: absolute;
+		left: 50px;
+		top: 160px;
+		width: 355px;
+		height: 40px;
+
+	}
+	</style>
+</head>
+<body>
+	<ul id="msg_list">
+		<li>
+			<button type="button" id="msg" class="hidden" onclick="show_card_msg(this.id);">This is msg</button>
+		</li>
+	</ul>
+
+	<div id="card" class="card_msg">
+		<div class="sender">
+			Sender
+		</div>
+		<div id="textid" class="text">
+			This is text
+		</div>
+		<div class="reply">
+			<input id="reply_box"></input>
+		</div>
+	</div>
+</body>
+</html>
