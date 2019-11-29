@@ -1,3 +1,5 @@
+var current_other = false;
+
 function size_control(str){
     len = str.length;
     len = len * 10 + 10;
@@ -20,8 +22,16 @@ function addMyMsgByTxt(str,isMy){
     len = size_control(message);
     if (isMy){
         temp.innerHTML = "<div class='my_msg'><div class='txt' id='temp'>"+ message +"</div></div>";
+        current_other = false;
     }else{
-        temp.innerHTML = "<div class='other_msg'><div class='txt' id='temp'>"+ message +"</div></div>";
+        if (current_other){
+            temp.innerHTML = "<div class='other_msg'><div class='profile'></div><div class='txt' id='temp'>"+ message +"</div></div>";
+        }
+        else{
+            temp.innerHTML = "<div class='other_msg'><div class='profile'><img src='img/temp.jpg' alt='ProfileImage' width='40px' height='40px' /></div><div class='txt' id='temp'>"+ message +"</div></div>";
+            current_other = true;
+        }
+        
     }
     document.getElementById('msg_list').appendChild(temp);
     document.getElementById('input_msg_box').value = "";

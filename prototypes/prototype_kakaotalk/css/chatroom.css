@@ -22,6 +22,20 @@ body{
     background-color: lightblue;
 }
 
+.profile{
+    position: relative;
+    left: 5px;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius:30%;
+    /*background-color: red;*/
+}
+
+img {
+    border-radius: 30%;
+}
+
 .my_msg {
 
     position: relative;
@@ -92,6 +106,7 @@ body{
 
 }
 
+
 .other_msg > .txt{
 
     position: absolute;
@@ -102,7 +117,7 @@ body{
 
     width: 200px;
 
-    left: 20px;
+    left: 50px;
 
     top: 40px;
 
@@ -132,6 +147,8 @@ body{
 
     left: 20px;
 }
+
+
 
 /* send box */
 
@@ -195,4 +212,5 @@ body{
     /*background:url("../../Images/ThemeDefault/bg_message_send.png") no-repeat left top;*/
     background-size:100% 100%;
 }
+
 
