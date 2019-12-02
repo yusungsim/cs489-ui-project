@@ -6,98 +6,26 @@
     violet : #c886e5
 */
 
-/* for debug*/
-/*
-div{
-    border: dotted 1px gray;
-}
-*/
-
-/* total div */
-
-.app{
-    width: 30em;
+/* total app sizing*/
+#app{
+    width: 50%;
     height: 50em;
-    background-color: #f9f9f9;
-    border: solid black 1pt;
-}
-
-.chats-list{
-    width: 100%;
-    height: 100%;
-}
-
-/* header */
-
-.chats-list-header{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 15%;
-    padding: 5%;
-}
-
-.header-title{
-    font-weight: bold;
-    font-size: x-large;
-}
-
-/* body */
-
-.chats-list-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 70%;
-}
-
-.chatroom{
-    display: flex;
-    flex-direction: row;
-    height: 20%;
-    width: 95%;
-    border-radius: 10px;
     background-color: #f6ecbf;
-    margin-bottom: 5%;
-    padding-top: 3%;
-    padding-bottom: 3%;
 }
 
-.chatroom-icon{
-    display: flex;
-    width: 25%;
+#header-navbar{
+    height:10%;
 }
 
-.chatroom-text{
-    display: flex;
-    width: 60%;
+#chatroom-list{
+    height: 80%
 }
 
-.chatroom-title{
-    font-weight: bold;
-    font-size: x-large;
+#tap-footer{
+    height:10%;
 }
 
-/* footer */
-
-.chats-list-footer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 15%;
-    background-color: #caadde;
-}
-
-.footer-tap{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20%;
-    height: 80%;
-    border-radius: 5%;
-    background-color: #c886e5;
+/* tap button sizing */
+.btn-group-lg{
+    height: 90%;
 }
