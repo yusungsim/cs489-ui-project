@@ -1,4 +1,5 @@
 var current_other = false;
+var current_id = 0;
 
 function size_control(str){
     len = str.length;
@@ -36,7 +37,8 @@ function addMyMsgByTxt(str,isMy){
     document.getElementById('msg_list').appendChild(temp);
     document.getElementById('input_msg_box').value = "";
     document.getElementById('temp').style.width = len;
-    document.getElementById('temp').id = 'fixed';
+    document.getElementById('temp').id = current_id;
+    current_id = current_id + 1;
 }
 function init(msgs,isMys){
     for(var i=0;i<msgs.length;i++){
