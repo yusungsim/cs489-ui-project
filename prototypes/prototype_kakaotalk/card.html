@@ -3,41 +3,43 @@
 <head>
 	<title>Card</title>
 	<meta charset="utf-8">
-	<script src="card.js"></script>
-	<style>
-	.card_msg {
-		box-sizing:border-box;
-		margin:20px;
-		border:3px solid gray;
-		width:400px;
-		height:200px;
-		border-radius:10px;
-		display:none;
-	}
-	.card_msg > .sender {
-		margin:10px;
-		font-weight:bold;
-		font-size:20px;
-	}
-	.card_msg > .text {
-		margin:10px;
-		font-size:20px;
-		text-align:center;
-	}
-	#reply_box {
-		position: absolute;
-		left: 50px;
-		top: 160px;
-		width: 355px;
-		height: 40px;
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/card.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.0.min.js" ></script>
+	<script src="js/card.js"></script>
 
-	}
-	</style>
 </head>
 <body>
+
 	<ul id="msg_list">
 		<li>
-			<button type="button" id="msg" class="hidden" onclick="show_card_msg(this.id);">This is msg</button>
+			<div class='my_msg'>
+				<div class='txt' id='temp1'>This is my message1</div>
+			</div>
+		</li>
+		<li>
+			<div class='other_msg'>
+				<div class='profile'></div>
+				<div class='txt' id='temp2'>This is other message1</div>
+			</div>
+		</li>
+		<li>
+			<div class='other_msg'>
+				<div class='profile'></div>
+				<div class='txt' id='temp3'>This is other message2</div>
+			</div>
+		</li>
+		<li>
+			<div class='other_msg'>
+				<div class='profile'></div>
+				<div class='txt' id='temp4'>This is other message3</div>
+			</div>
+		</li>
+		<li>
+			<div class='my_msg'>
+				<div class='txt' id='temp5'>This is my message2</div>
+			</div>
 		</li>
 	</ul>
 
@@ -52,5 +54,25 @@
 			<input id="reply_box"></input>
 		</div>
 	</div>
+
+	<div class="modal animated" id="target-modal" tabindex="-1" role="dialog" aria-hidden="true" aria-labelledby="modalTitle">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="modalTitle">Sender</h5>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group" id="modal-text">Some message</div>
+						<div class="form-group" id="modal-reply">
+							<label for="reply" class="col-form-label">Reply:</label>
+							<textarea class="form-control" id="reply"></textarea>
+						</div>
+					</form>
+			</div>
+		</div>
+	</div>
+
+<script type="text/javascript" src="js/bootstrap.js"></script>
 </body>
 </html>
