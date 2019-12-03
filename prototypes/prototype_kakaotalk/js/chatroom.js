@@ -8,37 +8,49 @@ function size_control(str){
     return len
 }
 function add_my_msg(){
-    var temp = document.createElement('li');
+    var temp = document.createElement('div');
     var message = document.getElementById('input_msg_box').value;
-    len = size_control(message);
-    temp.innerHTML = "<div class='my_msg'><div class='txt' id='temp'>"+ message +"</div></div>";
+    message = "<p style='word-break:break-all;'>"+message+"</p>";
+    temp.innerHTML = "<div class='my_msg' id='kkk'><div class='txt' id='temp'>"+ message +"</div></div>";
     document.getElementById('msg_list').appendChild(temp);
     document.getElementById('input_msg_box').value = "";
-    document.getElementById('temp').style.width = len;
-    document.getElementById('temp').id = 'fixed';
+    var temp = document.getElementById('temp');
+    var hhh = getComputedStyle(temp).height;
+    var qqq = parseFloat(hhh)+20.0;
+    hhh = qqq+"px";
+    document.getElementById('kkk').style.height = hhh;
+    document.getElementById('temp').id = current_id;
+    current_id = current_id + 1;
+    document.getElementById('kkk').id = 'fixed';
 }
 function addMyMsgByTxt(str,isMy){
-    var temp = document.createElement('li');
+    var temp = document.createElement('div');
     var message = str;
-    len = size_control(message);
+    message = "<p style='word-break:break-all;'>"+str+"</p>";
     if (isMy){
-        temp.innerHTML = "<div class='my_msg'><div class='txt' id='temp'>"+ message +"</div></div>";
+        temp.innerHTML = "<div class='my_msg' id='kkk'><div class='txt' id='temp'>"+ message +"</div></div>";
         current_other = false;
     }else{
         if (current_other){
-            temp.innerHTML = "<div class='other_msg'><div class='profile'></div><div class='txt' id='temp'>"+ message +"</div></div>";
+            temp.innerHTML = "<div class='other_msg' id='kkk'><div class='profile'></div><div class='txt' id='temp'>"+ message +"</div></div>";
         }
         else{
-            temp.innerHTML = "<div class='other_msg'><div class='profile'><img src='img/temp.jpg' alt='ProfileImage' width='40px' height='40px' /></div><div class='txt' id='temp'>"+ message +"</div></div>";
+            temp.innerHTML = "<div class='other_msg' id='kkk'><div class='profile'><img src='img/temp.jpg' alt='ProfileImage' width='40px' height='40px' /></div><div class='txt' id='temp'>"+ message +"</div></div>";
             current_other = true;
         }
         
     }
     document.getElementById('msg_list').appendChild(temp);
     document.getElementById('input_msg_box').value = "";
-    document.getElementById('temp').style.width = len;
+    var temp = document.getElementById('temp');
+    var hhh = getComputedStyle(temp).height;
+    var qqq = parseFloat(hhh)+20.0;
+    hhh = qqq+"px";
+    document.getElementById('kkk').style.height = hhh;
     document.getElementById('temp').id = current_id;
     current_id = current_id + 1;
+    document.getElementById('kkk').id = 'fixed';
+
 }
 function init(msgs,isMys){
     for(var i=0;i<msgs.length;i++){
