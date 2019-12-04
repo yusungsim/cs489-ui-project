@@ -10,6 +10,8 @@
 
     <!-- Custom CSS-->
     <link rel = "stylesheet" href="css/chats-list.css">
+    <link rel = "stylesheet" href="css/button-tap-color.css">
+    <link rel = "stylesheet" href="css/chat-list-normal.css">
 
     <title>chats</title>
   </head>
@@ -20,9 +22,9 @@
             <h1>일반 대화</h1>
         </nav>
         <!-- body for chatroom list-->
-        <ul class="list-group" id="chatroom-list">
+        <ul class="list-group overflow-auto" id="chatroom-list">
             <!-- chatroom-01 -->
-            <li class="list-group-item mt-1 mb-1" id="chatroom-01">
+            <li class="list-group-item mt-1 mb-1 chatroom-list-item" id="chatroom-01">
                 <div class="row">
                     <div class="col">
                         <img src="img/profile.jfif" class="img-fluid rounded" alt="icon"></img>
@@ -34,7 +36,7 @@
                 </div>
             </li>
             <!-- chatroom-02 -->
-            <li class="list-group-item mt-1 mb-1" id="chatroom-02">
+            <li class="list-group-item mt-1 mb-1 chatroom-list-item" id="chatroom-02">
                 <div class="row">
                     <div class="col">
                         <img src="img/profile.jfif" class="img-fluid rounded" alt="icon"></img>
@@ -46,19 +48,19 @@
                 </div>
             </li>
             <!-- chatroom-03 -->
-            <li class="list-group-item mt-1 mb-1" id="chatroom-03">
+            <li class="list-group-item mt-1 mb-1 chatroom-list-item" id="chatroom-03">
                 <div class="row">
                     <div class="col">
                         <img src="img/profile.jfif" class="img-fluid rounded" alt="icon"></img>
                     </div>
                     <div class="col-9">
                         <h5>최최최</h5>
-                        <small>업무용과 친목용의 이름을 확실히 정할 필요가 있다.</small>
+                        <small>업무용과 친목용의 이름은?</small>
                     </div>
                 </div>
             </li>
             <!-- chatroom-04 -->
-            <li class="list-group-item mt-1 mb-1" id="chatroom-04">
+            <li class="list-group-item mt-1 mb-1 chatroom-list-item  overflow-hidden" id="chatroom-04">
                 <div class="row">
                     <div class="col">
                         <img src="img/profile.jfif" class="img-fluid rounded" alt="icon"></img>
@@ -66,9 +68,7 @@
                     <div class="col-9">
                         <h5>정정정, 묭묭묭 외 3명</h5>
                         <small>
-                            * 텍스트 미리보기가 넘치면 어떻게 할 것 인지?
-                            * 채팅방 리스트가 넘치면 스크롤로 처리할 것인지?
-                            * color scheme을 확실히 정할 필요가 있다. 정해놓고 bootstrap div나 button 색깔 조정하기로.
+                            메시지 미리보기 가로로 잘리게 될 것이다
                         </small>
                     </div>
                 </div>

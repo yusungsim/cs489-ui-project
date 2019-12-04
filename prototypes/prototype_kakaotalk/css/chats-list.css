@@ -1,16 +1,22 @@
 /*
-    Color Palette https://colorhunt.co/palette/157400
-    white : #f9f9f9
-    yello : #f6ecbf
-    light-violet : #caadde
-    violet : #c886e5
+    Color Palette https://www.colourpod.com/post/24961966146/pastel-nightlight-submitted-by-parushine
+    #FFE1A3
+    #FFB495
+    #D662A8
+    #6A2D8A
+    #412A78
+    #0E0D5A
+
+    css gradient tool
+    https://cssgradient.io/
 */
 
 /* total app sizing*/
 #app{
+    min-width: 25em;
     width: 50%;
     height: 50em;
-    background-color: #f6ecbf;
+
 }
 
 #header-navbar{
@@ -25,7 +31,16 @@
     height:10%;
 }
 
+/* chatroom list sizing */
+.chatroom-list-item{
+    height:15%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 /* tap button sizing */
 .btn-group-lg{
     height: 90%;
 }
+
