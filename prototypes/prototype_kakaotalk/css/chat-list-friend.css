@@ -1,0 +1,8 @@
+#app{
+    background: rgb(255,180,149);
+    background: linear-gradient(180deg, rgba(255,180,149,1) 0%, rgba(255,255,255,1) 100%);
+}
+
+h1{
+    color: white;
+}
