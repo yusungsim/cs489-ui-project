@@ -24,7 +24,12 @@
 }
 
 #chatroom-list{
-    height: 75%
+    height: 75%;
+    min-height: 75%;
+}
+
+.list-group.row{
+    overflow: scroll;
 }
 
 #tap-footer{
@@ -37,6 +42,10 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.list-group-item{
+   min-height: 15%;
 }
 
 /* tap button sizing */
