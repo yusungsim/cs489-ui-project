@@ -142,42 +142,40 @@ function add_enter(str, sub_string){
     return result;
 }
 
-function parsing_string(input){
-    var l = input.length;
+function parsing_string(str){
+
     var rtn_value = [];
-    for (var i = 0 ; i<l ; i++){
-        var str = input[i][1];
-        if (str.length < 15)
+
+    if (str.length < 15)
+    {
+        rtn_value.push(input);
+    }
+
+    else
+    {
+
+        var result = add_enter(str, "?");
+        result = add_enter(result, "!");
+        result = add_enter(result, ".");
+
+        result = add_enter(str, "ㅋ");
+        result = add_enter(result, "ㅎ");
+        result = add_enter(result, "ㅠ");
+        result = add_enter(result, "ㅜ");
+
+        var array = result.split("\n");
+
+        var n = array.length;
+
+        for (var j = 0; j < n; j++)
         {
-            rtn_value.push(input[i]);
-        }
+            var token = array[j];
 
-        else
-        {
-
-            var result = add_enter(str, "?");
-            result = add_enter(result, "!");
-            result = add_enter(result, ".");
-
-            result = add_enter(str, "ㅋ");
-            result = add_enter(result, "ㅎ");
-            result = add_enter(result, "ㅠ");
-            result = add_enter(result, "ㅜ");
-
-            var array = result.split("\n");
-
-            var n = array.length;
-
-            for (var j = 0; j < n; j++)
+            if( token != "")
             {
-                var token = array[j];
-
-                if( token != "")
-                {
-                    rtn_value.push([input[i][0],token]);
-                }
+                rtn_value.push(token);
             }
-         }
+        }
      }
 
      return rtn_value;
