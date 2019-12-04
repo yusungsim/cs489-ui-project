@@ -28,7 +28,7 @@ function addMyMsgByTxt(str,who){
     var temp = document.createElement('div');
     var message = str;
     message = "<p style='word-break:break-all;'>"+str+"</p>";
-    if (who=="me"){
+    if (who=="나"){
         temp.innerHTML = "<div class='my_msg' id='kkk'><div class='txt' id='temp'>"+ message +"</div></div>";
         current_other = false;
     }else{
@@ -54,8 +54,9 @@ function addMyMsgByTxt(str,who){
     document.getElementById('kkk').id = 'fixed';
 
 }
-function init(msgs,isMys){
-    for(var i=0;i<msgs.length;i++){
-        addMyMsgByTxt(msgs[i],isMys[i]);
+function init(MsgsAndName){
+    for(var i=0;i<MsgsAndName.length;i++){
+        addMyMsgByTxt(MsgsAndName[i][1],MsgsAndName[i][0]);
+        console.log(MsgsAndName[i][0]);
     }
 }
