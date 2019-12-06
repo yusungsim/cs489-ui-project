@@ -24,7 +24,14 @@ display:none;
 }
 
 body{
+    background-color: white;
+}
+
+.bodybody{
     background-color: lightblue;
+    align-content: center;
+    width:510px;
+    height:570px;
 }
 
 .profile{
@@ -140,13 +147,13 @@ p{
 
 .send_msg {
 
-    position: absolute;
+    position: relative;
 
-    left:50px;
+    /*left:50px;*/
 
-    bottom:20px;
+    /*bottom:20px;*/
 
-    width:80%;
+    width:500px;
 
     height:63px;
 }
