@@ -38,14 +38,14 @@
 
 /* chatroom list sizing */
 .chatroom-list-item{
-    height:15%;
+    height:20%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 .list-group-item{
-   min-height: 15%;
+   min-height: 20%;
 }
 
 /* tap button sizing */
