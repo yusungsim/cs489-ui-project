@@ -1,0 +1,72 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/kakaotalk.css">
+    <link rel="stylesheet" href="css/chatroom.css">
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.0.min.js" ></script>
+    <script src="js/chatroom.js"></script>
+    <script src="js/card.js"></script>
+
+    <title>chatroom_3</title>
+  </head>
+  <body>
+    <div class="bodybody">
+    <!-- Set size!!!!! -->
+    <div id="msg_list" style="overflow:scroll; -ms-overflow-style: none; width:500px; height:500px">
+    
+    </div>
+
+        
+            
+                <div class="send_msg">
+                    <div class="send_txt">
+                        <textarea id="input_msg_box"></textarea>
+                    </div>
+                    <div class="send_button">
+                        <button type="button" id="send_button_box" class="hidden" onclick="add_my_msg();">Send</button>
+                    </div>
+                </div>
+    
+    <!-- For card representation-->
+    <div class="modal animated" id="target-modal" tabindex="-1" role="dialog" aria-hidden="true" aria-labelledby="modalTitle" data-backdrop="static">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTitle">Sender</h5>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group" id="modal-text">Some message</div>
+              <div class="form-group" id="modal-reply">
+                <label for="reply" class="col-form-label">Reply:</label>
+                <textarea class="form-control" id="reply"></textarea>
+              </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <script>init([["유병은", "A. 다음과 같은 코드가 있고\n1.    int a, b, c; a=b=0;\n\n2.    c = 0; for [a = 1; a < 5; a++]{c++;c = 0;}c = 0;\n\n3.    for [a = 1; a < 5; a++]for [b = 1; b < 5; b++]{c++;c = 0;}\n\n4.    return 0;\ninterpreter가 1.을 실행하고 2.를 실행하기 전에 멈췄다면\nnext 4로 3.으로 넘어가는게 맞나요?\n3.에서는 next 16을 해야 4.로 넘어가는건가요?\n\nB. function definition에서 argument 형식 중 int A[3]같은것은 없고\n무조건 int *A형식이라고 가정해도 되나요? 그러니까\nint foo[int A[3]]{return A[0];}\n이런 경우는 없고\nint foo[int *A]{return A[0];}\n이런 경우로만 주어진다고 가정해도 되나요?"], 
+        ["유병은", "안녕하세요, CS420 컴파일러설계 TA 손규호입니다.\nA. 이런 케이스는 고려해 본 적이 없네요.\n그리고 grading code를 이렇게 악의적으로 만들지도 않을 계획입니다.\n여러개의 statement가 한 line에 있는 일은 없을 겁니다.\n\nB. 네. function definition에는 반드시 * 형태로 정의됩니다.\n\n감사합니다."],["유병은", "이번에 또 물어보고 답 받은 거입니다 line_num의 존재의의를 없애버린 답변이네요"],["김동낙", "그"], ["김동낙", "histroy에서 라인 넘버 알려줘야해서"], ["김동낙", "필요하긴 할 것 같아요"], ["나", "오..."]]);</script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+  
+  </div>
+  
+  </body>
+</html>

@@ -1,0 +1,71 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/kakaotalk.css">
+    <link rel="stylesheet" href="css/chatroom.css">
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.0.min.js" ></script>
+    <script src="js/chatroom.js"></script>
+    <script src="js/card.js"></script>
+
+    <title>chatroom_5</title>
+  </head>
+  <body>
+    <div class="bodybody">
+    <!-- Set size!!!!! -->
+    <div id="msg_list" style="overflow:scroll; -ms-overflow-style: none; width:500px; height:500px">
+    
+    </div>
+
+        
+            
+                <div class="send_msg">
+                    <div class="send_txt">
+                        <textarea id="input_msg_box"></textarea>
+                    </div>
+                    <div class="send_button">
+                        <button type="button" id="send_button_box" class="hidden" onclick="add_my_msg();">Send</button>
+                    </div>
+                </div>
+    
+    <!-- For card representation-->
+    <div class="modal animated" id="target-modal" tabindex="-1" role="dialog" aria-hidden="true" aria-labelledby="modalTitle" data-backdrop="static">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTitle">Sender</h5>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group" id="modal-text">Some message</div>
+              <div class="form-group" id="modal-reply">
+                <label for="reply" class="col-form-label">Reply:</label>
+                <textarea class="form-control" id="reply"></textarea>
+              </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <script>init([["오채린", "현주찡"],["오채린", "혹시 저녁도 된다그랬나 ㅠㅠ"], ["백현주", "아잇 파토라니ㅠ"], ["백현주", "중간 끝나고 봥"], ["오채린", "아니면 다음주는 되닝ㅠㅠ"], ["백현주", "담주도 괜춘하지"]]);</script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+  
+  </div>
+  
+  </body>
+</html>

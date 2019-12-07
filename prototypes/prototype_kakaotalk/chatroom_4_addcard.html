@@ -1,0 +1,71 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/kakaotalk.css">
+    <link rel="stylesheet" href="css/chatroom.css">
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.0.min.js" ></script>
+    <script src="js/chatroom.js"></script>
+    <script src="js/card.js"></script>
+
+    <title>chatroom_4</title>
+  </head>
+  <body>
+    <div class="bodybody">
+    <!-- Set size!!!!! -->
+    <div id="msg_list" style="overflow:scroll; -ms-overflow-style: none; width:500px; height:500px">
+    
+    </div>
+
+        
+            
+                <div class="send_msg">
+                    <div class="send_txt">
+                        <textarea id="input_msg_box"></textarea>
+                    </div>
+                    <div class="send_button">
+                        <button type="button" id="send_button_box" class="hidden" onclick="add_my_msg();">Send</button>
+                    </div>
+                </div>
+    
+    <!-- For card representation-->
+    <div class="modal animated" id="target-modal" tabindex="-1" role="dialog" aria-hidden="true" aria-labelledby="modalTitle" data-backdrop="static">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTitle">Sender</h5>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group" id="modal-text">Some message</div>
+              <div class="form-group" id="modal-reply">
+                <label for="reply" class="col-form-label">Reply:</label>
+                <textarea class="form-control" id="reply"></textarea>
+              </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <script>init([["윤기목", "발표 자료에 25번이랑 27번 슬라이드 내용 똑같은 거 같은데 뒤에 꺼 빼면 될까요?"],["전정연", "앗 27번 빼면될것 같아요"], ["전정연", "깜빡하고 삭제를 안했네요ㅠㅠ"], ["윤기목", "넵넵 괜찮습니다 ㅎㅎ"],["이기상", "발표자료에 오타 몇개 있어서 수정했고 마지막 28번 슬라이드에 any questions 삭제하겠습니다~"], ["윤기목", "refrence 부분에도 똑같은 게 2번 들어가서 하나 지웠습니다"], ["윤기목", "저 그 api call 부분에 hamming distance 부분 이해가 잘 안 가네요 ㅜㅜ. 혹시 그거 담당하셨던 분 간략히 설명해주실 수 있나요?"], ["장건호", "저도 자세히는 찾아보지 않았었습니다 ㅠㅠㅠ 그 논문에서 원래의 것과 차이나는 정도를 hamming distance 로 나타낸다고 나와있었단것 같아요 해당 논문이 리뷰 논문이다보니 그정도만 나와있았던거 같고 찾아보려면 참고문헌 타고 들어가야할것 같아요"], ["윤기목", "아하 리뷰 논문이라 설명이 자세히 나와있진 않았군요 ㅜㅜ 일단 ppt 설명대로 발표하겠습니당"], ["윤기목", "저희 발표자료 klms에 올리셨나요?"], ["나","수고하셨습니다"]]);</script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+  
+  </div>
+  
+  </body>
+</html>
