@@ -4,33 +4,74 @@ var click_outside = true;
 var parsed_str = new Array();
 var modal = $("#target-modal");
 var isClosed = true;
+var isFirst = true;
 
 
 $(document).ready(function() {
 	$(".txt").click(function(event) {
-		current_object = $("#"+event.target.id);
+		
+		if (event.target.tagName == "P") {
+			current_object = $("#"+event.target.parentNode.id);
+		}
+		else{
+			current_object = $("#"+event.target.id);
+		}
 		click_count = 0;
 		isClosed = false;
+		isFirst = true;
 		$("#target-modal").addClass("slideInUp");
 		show_card_msg(current_object, click_count);
 	});
-	$("#target-modal").on("show.bs.modal", function() {
-		$("#target-modal").click(function(event) {
-			$("#target-modal").on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function( evt ) {
-				$("#target-modal").modal('hide');
-			});
-			$("#target-modal").removeClass("slideInUp").addClass("slideOutUp");
-			isClosed = true;
+	
+	$("#target-modal").on("shown.bs.modal", function() {
+		$("#target-modal").click(function(e) {
+			if(e.target.id == "reply") {
+				$("#reply").keyup(function(key) {
+					if (key.keyCode == 13) {
+						if($("#reply").val() != "\n") {
+							addMyMsgByTxt($("#reply").val(), "나");
+							$("#reply").val("");
+							$("#reply").addClass("animated pulse");
+							$("#reply").on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function( evt ) {
+								$("#reply").removeClass("animated pulse");
+							});
+							$("#msg_list").scrollTop($("#msg_list")[0].scrollHeight);
+						}
+						else {
+							$("#reply").val("");
+							$("#reply").addClass("animated shake");
+							$("#reply").on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function( evt ) {
+								$("#reply").removeClass("animated shake");
+							});
+						}
+					}
+				});
+			}
+			else {
+				$("#target-modal").on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function( evt ) {
+					$("#target-modal").modal('hide');
+				});
+				$("#target-modal").removeClass("slideInUp").addClass("slideOutUp");
+				isClosed = true;
+			}
 		});
 
 	});
+	
+
 	$("#target-modal").on("hidden.bs.modal", function() {
 		$("#target-modal").removeClass("slideOutUp");
 		$("#target-modal").off("webkitAnimationEnd oanimationend msAnimationEnd animationend");
 	});
 	$('#target-modal').on('mousewheel', function(e){
 		if(e.originalEvent.wheelDelta /120 > 0) {
-			alert("up");
+			if(isClosed) {
+
+			}
+			else {
+				click_count--;
+				show_card_msg(current_object, click_count);
+			}
 		}
 		else{
 			if(isClosed) {
@@ -43,65 +84,80 @@ $(document).ready(function() {
 		}
 	});
 
-
-
 });
 
 
 
 function nextObj(currentNode) {
-	return currentNode.parent().parent().next().children().children();
+	return currentNode.parent().parent().next().children().find(".txt");
+}
+function prevObj(currentNode) {
+	return currentNode.parent().parent().prev().children().find(".txt");
 }
 
-
-function parsing(str){
-	result = new Array();
-	result.push("Target string : "+str);
-	result.push("Parsed str1");
-	result.push("Parsed str2");
-	return result;
-}
 
 function change_modal_content(event) {
 
 }
 
+function find_sender(current_obj) {
+	var result_obj = current_obj;
+	while(result_obj.parent().find(".p_name").text()=="") {
+		result_obj = prevObj(result_obj);
+	}
+	return result_obj;
+}
+
+
 function show_card_msg(current_obj, cnt) {
 	if(current_obj.text()) {
-		parsed_str = parsing(current_obj.text());
-		if(cnt < parsed_str.length) {
+		parsed_str = parsing_string(current_obj.text());
+		if(cnt < parsed_str.length && cnt >= 0) {
 			if(current_obj.parent().attr("class")=="other_msg") {
 				$(".modal-header").css("background-color", "white");
 				$(".modal-body").css("background-color", "white");
-				$("#modalTitle").text("Sender");
+				if(current_obj.parent().find(".p_name").text()!="" && !isFirst) {
+					$("#target-modal").removeClass("slideInUp").addClass("pulse");
+					$("#target-modal").on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function( evt ) {
+						$("#target-modal").removeClass("pulse");
+					});
+				}
+				$("#modalTitle").text(find_sender(current_obj).parent().find(".p_name").text());
 				$("#modal-reply").css("display", "inline");
+
 			}
 			else {
 				$(".modal-header").css("background-color", "lightyellow");
 				$(".modal-body").css("background-color", "lightyellow");
-				$("#modalTitle").text("Me");
+				$("#modalTitle").text("나");
 				$("#modal-reply").css("display", "none");
 
 			}
 			$("#modal-text").text(parsed_str[cnt]);
 			$("#target-modal").modal("show");
 		}
-		else {
+		else if (cnt >= parsed_str.length) {
 			click_count = 0;
 			current_object = nextObj(current_obj);
 			show_card_msg(current_object, click_count);
 		}
+		else {
+			click_count = parsing_string(prevObj(current_obj).text()).length - 1;
+			current_object = prevObj(current_obj);
+			show_card_msg(current_object, click_count);
+		} 
 	}
 	else {
+		console.log("closed");
 		click_count = 0;
 		isClosed = true;
+	
+		$("#target-modal").removeClass("slideInUp").addClass("slideOutUp");
 		$("#target-modal").on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function( evt ) {
 			$("#target-modal").modal('hide');
 		});
-		$("#target-modal").removeClass("slideInUp").addClass("slideOutUp");
 	}
-	//current_obj = nextObj(current_obj);
-	//alert(current_obj.text());
+	isFirst = false;
 }
 
 var chat_log = [["윤기목", "발표 자료에 25번이랑 27번 슬라이드 내용 똑같은 거 같은데 뒤에 꺼 빼면 될까요?"],
@@ -148,7 +204,7 @@ function parsing_string(str){
 
     if (str.length < 15)
     {
-        rtn_value.push(input);
+        rtn_value.push(str);
     }
 
     else
