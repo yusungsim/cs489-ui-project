@@ -28,10 +28,10 @@ body{
 }
 
 .bodybody{
-    background-color: lightblue;
+    background-color: #F4C2C2;
     align-content: center;
     width:510px;
-    height:570px;
+    height:626px;
 }
 
 .profile{
@@ -206,4 +206,13 @@ p{
     background-size:100% 100%;
 }
 
+#back_button {
+    display:block;
+    width:20px;
+    height:20px;
+    text-align:center;
+    font-size: 15px;
+    color:lightblue;
+
+}
 
