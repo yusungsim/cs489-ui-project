@@ -19,8 +19,6 @@
 
 }
 
-
-
 #header-navbar{
     height:15%;
 }
@@ -53,4 +51,9 @@
 /* tap button sizing */
 .btn-group-lg{
     height: 90%;
+}
+
+/* no color for <a> tag */
+a{
+    color: black;
 }
