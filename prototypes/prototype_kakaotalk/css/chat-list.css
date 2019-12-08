@@ -12,15 +12,23 @@
 */
 
 /* total app sizing*/
+
+#chatroom-list{
+    background: ivory;
+}
+
+
 #app{
     min-width: 25em;
     width: 50%;
     height: 50em;
+    background: ivory;
 
 }
 
 #header-navbar{
     height:15%;
+    width : 100%;
 }
 
 #chatroom-list{

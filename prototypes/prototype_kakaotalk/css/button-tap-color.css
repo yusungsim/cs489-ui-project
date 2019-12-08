@@ -4,8 +4,9 @@
 .btn-primary:active,
 .btn-primary:visited,
 .btn-primary:focus {
-    background-color: #FFB495 !important;
-    border-color: #FFB495 !important;
+    background-color: #FFE373 !important;
+    border-color: #FFE373 !important;
+    color:dimgray;
 }
 
 .btn-secondary,
@@ -13,8 +14,9 @@
 .btn-secondary:active,
 .btn-secondary:visited,
 .btn-secondary:focus {
-    background-color: #D662A8 !important;
-    border-color: #D662A8 !important;
+    background-color: #FFE373 !important;
+    border-color:  #FFE373!important;
+    color:dimgray;
 }
 
 .btn-warning,
@@ -22,9 +24,9 @@
 .btn-warning:active,
 .btn-warning:visited,
 .btn-warning:focus {
-    background-color: #6A2D8A !important;
-    border-color: #6A2D8A !important;
-    color: white;
+    background-color: lightblue !important;
+    border-color: lightblue !important;
+    color:dimgray;
 }
 
 .btn-info,
@@ -32,6 +34,7 @@
 .btn-info:active,
 .btn-info:visited,
 .btn-info:focus {
-    background-color: #412A78 !important;
-    border-color: #412A78 !important;
+    background : #F4C2C2 !important;
+    border-color: #F4C2C2 !important;
+    color :dimgray;
 }
