@@ -1,8 +1,11 @@
 #app{
-    background: rgb(214,98,168);
-    background: linear-gradient(180deg, rgba(214,98,168,1) 0%, rgba(255,255,255,1) 100%);
+    background: #FFFFFF;
 }
 
 h1{
-    color: white;
+    color: black;
+}
+
+nav{
+    background : #F4C2C2 ;
 }

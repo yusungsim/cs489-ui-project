@@ -202,7 +202,7 @@ function parsing_string(str){
 
     var rtn_value = [];
 
-    if (str.length < 15)
+    if (str.length < 25)
     {
         rtn_value.push(str);
     }
