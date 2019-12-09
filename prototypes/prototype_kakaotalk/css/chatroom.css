@@ -150,7 +150,7 @@ p{
 
     position: relative;
 
-    /*left:50px;*/
+    left: 10px;
 
     /*bottom:20px;*/
 
@@ -177,7 +177,7 @@ p{
 }
 
 #input_msg_box {
-    leftL 30px;
+    left: 30px;
 
     display:block;
 
