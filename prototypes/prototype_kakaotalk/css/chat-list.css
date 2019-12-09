@@ -19,9 +19,8 @@
 
 
 #app{
-    min-width: 25em;
-    width: 50%;
-    height: 50em;
+    width: 520px;
+    height: 630px;
     background: ivory;
 
 }
