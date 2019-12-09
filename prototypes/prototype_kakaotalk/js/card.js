@@ -5,7 +5,7 @@ var parsed_str = new Array();
 var modal = $("#target-modal");
 var isClosed = true;
 var isFirst = true;
-
+var parsing_criteria = new Array("?", "!", ".", "ㅋ", "ㅎ", "ㅠ", "ㅜ");
 
 $(document).ready(function() {
 	$(".txt").click(function(event) {
@@ -45,6 +45,8 @@ $(document).ready(function() {
 							});
 						}
 					}
+			
+
 				});
 			}
 			else {
@@ -53,6 +55,18 @@ $(document).ready(function() {
 				});
 				$("#target-modal").removeClass("slideInUp").addClass("slideOutUp");
 				isClosed = true;
+			}
+		});
+		$(document).keyup(function(key) {
+					// 윗 방향키
+			if (key.keyCode == 38) {
+				click_count--;
+				show_card_msg(current_object, click_count);						
+			}
+			// 아랫 방향키
+			else if (key.keyCode == 40) {
+				click_count++;
+				show_card_msg(current_object, click_count);							
 			}
 		});
 
@@ -188,7 +202,12 @@ function add_enter(str, sub_string){
         if(array[i]=="")
         {
             result = result + sub_string;
-        }
+		}
+		else if(parsing_criteria.includes(array[i][0]))
+		{
+			result += sub_string + array[i][0] + "\n" + array[i].slice(1);
+		}
+
         else
         {
             result = result +  sub_string +"\n" + array[i];
@@ -200,7 +219,9 @@ function add_enter(str, sub_string){
 
 function parsing_string(str){
 
-    var rtn_value = [];
+
+	var rtn_value = [];
+	console.log(str.length);
 
     if (str.length < 25)
     {
@@ -209,15 +230,21 @@ function parsing_string(str){
 
     else
     {
+		var result = add_enter(str, parsing_criteria[0]);
+		for(var i=1; i<parsing_criteria.length; i++) {
+			result = add_enter(result, parsing_criteria[i]);
+		}
 
+		/*
         var result = add_enter(str, "?");
         result = add_enter(result, "!");
         result = add_enter(result, ".");
 
-        result = add_enter(str, "ㅋ");
+        result = add_enter(result, "ㅋ");
         result = add_enter(result, "ㅎ");
         result = add_enter(result, "ㅠ");
         result = add_enter(result, "ㅜ");
+		*/
 
         var array = result.split("\n");
 
