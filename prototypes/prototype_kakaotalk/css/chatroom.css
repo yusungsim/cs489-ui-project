@@ -35,6 +35,14 @@ body{
     margin:0 auto;
 }
 
+.bodybody2{
+    background-color: lightblue;
+    align-content: center;
+    width:520px;
+    height:630px;
+    margin:0 auto;
+}
+
 .profile{
     position: relative;
     left: 5px;
