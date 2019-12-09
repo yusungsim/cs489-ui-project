@@ -14,6 +14,5 @@ Jaegeon Jo (https://github.com/jlucete)
 1. 11/17 : Interview Review, Ideation @ KakaoTalk
 2. 11/20 : Learn HTML and JS, Prototyping
 3. 11/27 : User test with first prototype
-
-Final presentation : 12/05
-
+4. 11/27 ~ 12/9 : Prototype Compeletion
+5. 12/10 : Final Presentation

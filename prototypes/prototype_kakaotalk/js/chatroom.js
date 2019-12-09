@@ -13,6 +13,9 @@ function size_control(str){
 function add_my_msg(){
     var temp = document.createElement('div');
     var message = document.getElementById('input_msg_box').value;
+    if(message==""){
+        return 0;
+    }
     message = "<p style='word-break:break-all;'>"+message+"</p>";
     temp.innerHTML = "<div class='my_msg' id='kkk'><div class='txt' id='temp'>"+ message +"</div></div>";
     document.getElementById('msg_list').appendChild(temp);
@@ -26,6 +29,7 @@ function add_my_msg(){
     document.getElementById('temp').id = current_id;
     current_id = current_id + 1;
     document.getElementById('kkk').id = 'fixed';
+    $("#msg_list").scrollTop($("#msg_list")[0].scrollHeight);
 }
 function addMyMsgByTxt(str,who){
     var temp = document.createElement('div');
@@ -85,6 +89,7 @@ function addMyMsgByTxt(str,who){
 function init(MsgsAndName){
     for(var i=0;i<MsgsAndName.length;i++){
         addMyMsgByTxt(MsgsAndName[i][1],MsgsAndName[i][0]);
+        $("#msg_list").scrollTop($("#msg_list")[0].scrollHeight);
         console.log(MsgsAndName[i][1]);
     }
 }

@@ -30,8 +30,9 @@ body{
 .bodybody{
     background-color: #F4C2C2;
     align-content: center;
-    width:510px;
-    height:626px;
+    width:520px;
+    height:630px;
+    margin:0 auto;
 }
 
 .profile{
@@ -176,6 +177,8 @@ p{
 }
 
 #input_msg_box {
+    leftL 30px;
+
     display:block;
 
     width:100%;
